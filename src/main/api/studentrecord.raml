@@ -1,0 +1,60 @@
+#%RAML 1.0
+version: v1
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/ba7f98d3-01a6-4c07-8009-5e79f157e78b/ # 
+title: studentrecord
+
+/student:
+ get:
+   responses:
+     200:
+       body:
+         application/json:
+           example: !
+             { "root":
+               { "name": "Ashok",
+               "id": "123456",
+               "year": "2014",
+               "course": "B.Tech"
+               },
+                 "name": "sunny",
+                  "id": "456789",
+                  "year": "2015",
+                  "course": "M.Tech"
+             }
+               
+ put:
+  description: update an existing record in the list 
+  responses:
+     200:
+       body:
+         application/json:
+           example: 
+            {"name" : "vishal reddy",
+            "id" : "456789",
+            "year" : "2015",
+            "course" : "M.com" 
+            }
+ post:
+  description: 
+  responses:
+     200:
+       body:
+         application/json:
+           example:
+            { "name" : "prakash",
+             "id" : "789123",
+             "year" : "2018",
+             "course" : "MCA"
+            } 
+ delete:
+  description:
+  responses:
+    200:
+      body:
+        application/json:
+          example: 
+           { "name" : "Ashok",
+           "id" : "123456",
+           "year" : "2014",
+           "course" : "B.Tech"
+           }
